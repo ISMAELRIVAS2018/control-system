@@ -4,7 +4,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // components
 
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
+import SideBarConexion from "components/SideBarConexion/SideBarConexion";
 import HeaderStats from "components/Headers/HeaderStats.js";
 import FooterAdmin from "components/Footers/FooterAdmin.js";
 
@@ -18,7 +18,7 @@ import Tables from "views/admin/Tables.js";
 export default function Admin() {
   return (
     <>
-      <Sidebar />
+      <SideBarConexion />
       <div className="relative md:ml-64 bg-blueGray-100">
         <AdminNavbar />
         {/* Header */}
