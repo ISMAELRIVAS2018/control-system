@@ -7,9 +7,11 @@ export default function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [erro, setErro] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErro("");
     try {
       const response = await axios.post(
         baseUrl,
@@ -20,16 +22,24 @@ export default function Login() {
       );
       console.log(response.data);
       console.log(response.accessToken);
-      alert(response.status);
-      alert('login successfully');
+      alert("login successfully");
+      // navigate("/");
     } catch (error) {
-      console.log(error);
+      setErro(error.response.data.error);
+      console.log(error.response.data.error);
     }
   };
 
+  
+
   return (
     <>
+      {erro && (
+       <p className="text-white">{erro}</p>
+      )}
+      
       <div className="container mx-auto px-4 h-full">
+        
         <div className="flex content-center items-center justify-center h-full">
           <div className="w-full lg:w-4/12 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
