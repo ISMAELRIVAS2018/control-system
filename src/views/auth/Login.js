@@ -30,51 +30,43 @@ export default function Login() {
     }
   };
 
-  
-
   return (
     <>
-      {erro && (
-       <p className="text-white">{erro}</p>
-      )}
-      
-      <div className="container mx-auto px-4 h-full">
+      {erro && <p className="text-white">{erro}</p>}
+
+   
+      <div className="container mx-auto px-8 h-3/6 box-content md:h-32 w-32 p-4 border-4 flex justify-center ">
+      <div className="auth-wrapper ">
+          <div className="auth-content ">
+            <div className="auth-bg  ">
+              <span className="r"></span>
+              <span className="r s"></span>
+              <span className="r s"></span>
+              <span className="r"></span>
+            </div>
+          </div>
+        </div>
+
+        {/* //---------FELX ALINIAR EN EL CONTENEDOR ----// */}
+        <div className="flex content-center items-center lg:justify-center justify-statr h-1/2 shadow-2xl rounded-lg  border-0 py-4">
         
-        <div className="flex content-center items-center justify-center h-full">
+              {/* // ----LOGIN------// */}
           <div className="w-full lg:w-4/12 px-4">
-            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
+            {/* // -------CONTENEDOR FLEX CENTER ------// */}
+            <div className="relative flex flex-col min-w-0 break-words w-full mb-6   ">
               <div className="rounded-t mb-0 px-6 py-6">
                 <div className="text-center mb-3">
-                  <h6 className="text-blueGray-500 text-sm font-bold">
-                    Sign in with
-                  </h6>
+                  <h6 className="text-blueGray-500 text-sm font-bold"></h6>
+                  <img
+                    alt="..."
+                    className="w-1/2 mr-1 cart "
+                    src={require("assets/img/conexion.jpg").default}
+                  />
                 </div>
-                <div className="btn-wrapper text-center">
-                  <button
-                    className="bg-white active:bg-blueGray-50 text-blueGray-700 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
-                    type="button"
-                  >
-                    <img
-                      alt="..."
-                      className="w-5 mr-1"
-                      src={require("assets/img/github.svg").default}
-                    />
-                    Github
-                  </button>
-                  <button
-                    className="bg-white active:bg-blueGray-50 text-blueGray-700 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
-                    type="button"
-                  >
-                    <img
-                      alt="..."
-                      className="w-5 mr-1"
-                      src={require("assets/img/google.svg").default}
-                    />
-                    Google
-                  </button>
-                </div>
+
                 <hr className="mt-6 border-b-1 border-blueGray-300" />
               </div>
+
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                 <div className="text-blueGray-400 text-center mb-3 font-bold">
                   <small>Or sign in with credentials</small>
@@ -133,24 +125,33 @@ export default function Login() {
                     </button>
                   </div>
                 </form>
+                {/* //-------CONTENEDOR DE REGISTRP Y RECUPERACION DE CLAVE----// */}
+                <div className="flex flex-wrap mt-6 relative">
+                  <div className="w-1/2">
+                    <a
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                      className="text-blueGray-200"
+                    >
+                      <small>Forgot password?</small>
+                    </a>
+                  </div>
+                  <div className="w-1/2 text-right">
+                    <Link to="/auth/register" className="text-blueGray-200">
+                      <small>Create new account</small>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex flex-wrap mt-6 relative">
-              <div className="w-1/2">
-                <a
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  className="text-blueGray-200"
-                >
-                  <small>Forgot password?</small>
-                </a>
-              </div>
-              <div className="w-1/2 text-right">
-                <Link to="/auth/register" className="text-blueGray-200">
-                  <small>Create new account</small>
-                </Link>
-              </div>
-            </div>
+            {/* //-------CONTENEDOR DE REGISTRP Y RECUPERACION DE CLAVE----// */}
+          </div>
+          <div className="w-4/5 md:w-full flex items-center">
+            <img
+              alt="..."
+              className="object-cover w-full  hidden md:block dibujo1  "
+              src={require("assets/img/dibujo.jpg").default}
+            />
           </div>
         </div>
       </div>
