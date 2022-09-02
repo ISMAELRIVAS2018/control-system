@@ -35,20 +35,21 @@ export default function Login() {
       {erro && <p className="text-white">{erro}</p>}
 
    
-      <div className="container mx-auto px-8 h-3/6 box-content md:h-32 w-32 p-4 border-4 flex justify-center ">
+      <div className="container mx-auto px-8 h-3/6 box-content md:h-32 w-32 p-0 pb-11 border-4 flex justify-center ">
+        
       <div className="auth-wrapper ">
           <div className="auth-content ">
             <div className="auth-bg  ">
               <span className="r"></span>
               <span className="r s"></span>
               <span className="r s"></span>
-              <span className="r"></span>
+       {/*        <span className="r"></span> */}
             </div>
           </div>
         </div>
 
         {/* //---------FELX ALINIAR EN EL CONTENEDOR ----// */}
-        <div className="flex content-center items-center lg:justify-center justify-statr h-1/2 shadow-2xl rounded-lg  border-0 py-4">
+        <div className="flex content-center items-center justify-center h-full justify-statr  p-1 py-20 shadow-lg rounded-lg  border-0 ">
         
               {/* // ----LOGIN------// */}
           <div className="w-full lg:w-4/12 px-4">
@@ -118,7 +119,7 @@ export default function Login() {
 
                   <div className="text-center mt-6">
                     <button
-                      className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                      className="bg-yellow-300 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                       type="submit"
                     >
                       Sign In
