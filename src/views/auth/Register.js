@@ -11,14 +11,14 @@ export default function Register() {
               <span className="r"></span>
               <span className="r s"></span>
               <span className="r s"></span>
-          {/*     <span className="r text-center mt-6 "></span> */}
+              <span className="r text-center mt-6 "></span>
             </div>
           </div>
         </div>
         
-        <div className="flex content-center items-center justify-center h-full p-1 py-20 ">
+        <div className="flex content-center items-center justify-center h-full  ">
           <div className="w-full lg:w-6/12 px-4">
-            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg  border-0">
+            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg  bg-blueGray-20">
               <div className="rounded-t mb-0 px-6 py-6">
                 <div className="text-center mb-3">
                   <h6 className="text-blueGray-500 text-sm font-bold">

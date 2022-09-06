@@ -3200,13 +3200,13 @@ height: 20px;
 }
 .auth-wrapper .auth-bg .r.s:nth-child(2) {
 top: 150px;
-right: -150px;
+/* right: -150px; */
 background: #04a9f5;
 }
 .auth-wrapper .auth-bg .r.s:nth-child(3) {
-left: -150px;
-bottom: 150px;
-background: #1de9b6;
+  right: 180px;
+  top: 582px;
+  background: #04a9f5;
 }
 .auth-wrapper .auth-bg .r:nth-child(odd) {
 -webkit-animation: floating 7s infinite;

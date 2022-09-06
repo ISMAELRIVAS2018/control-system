@@ -42,13 +42,13 @@ export default function Login() {
               <span className="r"></span>
               <span className="r s"></span>
               <span className="r s"></span>
-       {/*        <span className="r"></span> */}
+              <span className="r"></span>
             </div>
           </div>
         </div>
 
         {/* //---------FELX ALINIAR EN EL CONTENEDOR ----// */}
-        <div className="flex content-center items-center justify-center h-full justify-statr  p-1 py-20 shadow-lg rounded-lg  border-0 ">
+        <div className="flex content-center items-center justify-center h-1/2 justify-statr  p-1 shadow-lg rounded-lg  border-0 ">
         
               {/* // ----LOGIN------// */}
           <div className="w-full lg:w-4/12 px-4">
