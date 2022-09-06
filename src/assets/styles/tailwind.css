@@ -34,6 +34,8 @@ Use a more readable tab size (opinionated).
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  overflow: hidden;
+
 }
 
 /*
@@ -64,6 +66,7 @@ body {
 		sans-serif,
 		'Apple Color Emoji',
 		'Segoe UI Emoji';
+
 }
 
 /*
@@ -3090,7 +3093,7 @@ img,.cart {
             /*     //-------------------ANIMACION DE GOBITO------------------------// */
 
 .auth-wrapper {
-position: relative;
+/* position: relative; */
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
@@ -3137,7 +3140,7 @@ margin-bottom: 0;
 z-index: 5;
 }
 .auth-wrapper .auth-content {
-position: relative;
+/* position: relative; */
 /* width: 390px; */
 padding: 15px;
 z-index: 5;
@@ -3180,13 +3183,15 @@ border-radius: 50%;
 }
 .auth-wrapper .auth-bg .r:first-child {
   top: -60px;
-  right: -203px
+  /* right: -203px */
+  left: -61px;
 ;
   background: linear-gradient(-135deg, #1de9b600 0%, #1dc4e985 100%);
 }
 .auth-wrapper .auth-bg .r:last-child {
-left: 960px;
-bottom: -550px;
+/* left: 960px; */
+right: -48px;
+bottom: -66px;
 background: linear-gradient(-135deg, #1de9b600 0%, #1dc4e985 100%);
 }
 .auth-wrapper .auth-bg .r.s {

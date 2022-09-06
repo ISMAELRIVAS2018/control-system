@@ -35,8 +35,7 @@ export default function Login() {
       {erro && <p className="text-white">{erro}</p>}
 
    
-      <div className="container mx-auto px-8 h-3/6 box-content md:h-32 w-32 p-0 pb-11 border-4 flex justify-center ">
-        
+      <div className="container mx-auto px-8 h-3/6 box-content md:h-32 w-32 p-4 border-4  justify-center ">
       <div className="auth-wrapper ">
           <div className="auth-content ">
             <div className="auth-bg  ">
