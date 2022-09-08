@@ -6,9 +6,9 @@ import "react-data-table-component-extensions/dist/index.css";
 import { columns } from "./data";
 
 export default function CardTable() {
-  const baseUrl = "http://127.0.0.1:8000/api/proyecto/lista/1";
+  const baseUrl = "https://127.0.0.1:49160/api/proyecto/lista/1";
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjE5ODA5NzUsImV4cCI6MTY2MTk4NDU3NSwibmJmIjoxNjYxOTgwOTc1LCJqdGkiOiJVSmdrdWIyZ2VSQlg4RGhiIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.KPDPeVrRUyIamTQ_jYXdl-006FqjLLpSS5X8iUWgx9w";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjQ5MTYwL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNjYyNjU5ODQ3LCJleHAiOjE2NjI3NDYyNDcsIm5iZiI6MTY2MjY1OTg0NywianRpIjoiY1hxUFVOcDJoemFHN0lNRiIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NLaoOIg4wjphsbtRa3zi4DRQsVqPinVufWzPRmDqScg";
 
   const [infoUsertableData, setInfoUserTableData] = useState([]);
 

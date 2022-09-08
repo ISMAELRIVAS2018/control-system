@@ -5,9 +5,11 @@
   "repository": "https://github.com/creativetimofficial/notus-react",
   "license": "MIT",
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@fortawesome/fontawesome-free": "5.15.3",
     "@popperjs/core": "2.9.1",
     "@tailwindcss/forms": "0.2.1",
+    "antd": "^4.23.0",
     "autoprefixer": "10.2.5",
     "axios": "^0.27.2",
     "chart.js": "2.9.4",
@@ -21,7 +23,8 @@
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
-    "tailwindcss": "2.0.4"
+    "tailwindcss": "2.0.4",
+    "proxy": "http://45.456.200.5:7000/"
   },
   "scripts": {
     "start": "react-scripts start",
