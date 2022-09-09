@@ -4,7 +4,8 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // components
 
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import SideBarConexion from "components/SideBarConexion/SideBarConexion";
+/* import SideBarConexion from "components/SideBarConexion/SideBarConexion"; */
+import SideBarConexion from "components/SideBarConexion/SideBarConexion2";
 import HeaderStats from "components/Headers/HeaderStats.js";
 import FooterAdmin from "components/Footers/FooterAdmin.js";
 
@@ -14,10 +15,12 @@ import Dashboard from "views/admin/Dashboard.js";
 import Maps from "views/admin/Maps.js";
 import Settings from "views/admin/Settings.js";
 import Tables from "views/admin/Tables.js";
+/* import Sidebar from "components/Sidebar/Sidebar"; */
 
 export default function Admin() {
   return (
     <>
+      {/* <Sidebar/> */}
       <SideBarConexion />
       <div className="relative md:ml-64 bg-blueGray-100">
         <AdminNavbar />

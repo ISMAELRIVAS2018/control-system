@@ -1135,6 +1135,10 @@ select {
   background-color: rgba(2, 132, 199, var(--tw-bg-opacity));
 }
 
+.bg-blue{
+  background-color: #004A99;
+}
+
 .bg-lightBlue-800 {
   --tw-bg-opacity: 1;
   background-color: rgba(7, 89, 133, var(--tw-bg-opacity));
@@ -2374,12 +2378,6 @@ select {
   color: rgba(2, 132, 199, var(--tw-text-opacity));
 }
 
-.text-yellow-300 {
-  --tw-text-opacity: 1;
-  color: rgb(237, 218, 121);;
-}
-
-
 .text-teal-500 {
   --tw-text-opacity: 1;
   color: rgba(20, 184, 166, var(--tw-text-opacity));
@@ -2438,6 +2436,19 @@ select {
 .text-blueGray-800 {
   --tw-text-opacity: 1;
   color: rgba(30, 41, 59, var(--tw-text-opacity));
+}
+
+
+.text-yellow-500{
+  color: rgb(234 179 8);
+}
+
+.text-yellow-200{
+  color: rgb(254 240 138);
+}
+
+.hover\:text-black:hover {
+  color: black;
 }
 
 .hover\:text-lightBlue-600:hover {
@@ -2579,6 +2590,31 @@ select {
 .duration-150 {
   transition-duration: 150ms;
 }
+
+/* 
+  Estilos del formulario para crear proyecto
+*/
+
+.text-red-600{
+  color: rgb(220 38 38);
+}
+
+.placeholder-blueGray::placeholder {
+  color: #71717a;
+}
+
+.mr-5{
+  margin-right: 1.25rem;
+}
+
+.mr-8{
+  margin-right: 2rem;
+}
+
+/* 
+  Fin de los estilos del formulario
+*/
+
 
 @-webkit-keyframes spin {
   to {
