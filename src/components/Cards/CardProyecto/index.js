@@ -2,10 +2,15 @@ import {useEffect, useState } from "react";
 import { useForm } from "hook/useForm";
 import axios from "axios";
 import Alert from "components/Alert";
+import { getEstadosProyectos2 } from "services/index";
 
 export default function CardProyecto() {
   const API = "http://127.0.0.1:8000/api/pro_estatus/lista";
-  const token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjI2NTY1MDIsImV4cCI6MTY2MjY2MDEwMiwibmJmIjoxNjYyNjU2NTAyLCJqdGkiOiJ5aHV5OFJPSkdlV09ObTZPIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.eoBp-O9pmltyR8f6rtVECLpAQ8IIDaxxgBXu61PuoI0";
+  const token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjI3MzYzNjgsImV4cCI6MTY2MjczOTk2OCwibmJmIjoxNjYyNzM2MzY4LCJqdGkiOiJYQ1hvQnBRZnY4cjZWZXFYIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ylnE6zDhZmRWngUpNLT52ivag1oSDCD1WojMyjBiU6M";
+
+getEstadosProyectos2().then((datos)=>{
+  console.log(datos);
+});
 
   const proyectoInicial={
     pNombre: "",
@@ -49,9 +54,8 @@ export default function CardProyecto() {
     handSubmit
   }=useForm(proyectoInicial,validationsForm);
 
-  // Valores iniciales del proyecto 
-
   const[estados,setEstados]=useState([]);
+
   const getEstadosProyectos = async () => {
     const respuesta = await axios.get(API, {
         headers: {
@@ -64,6 +68,7 @@ export default function CardProyecto() {
 
 useEffect(() => {
   getEstadosProyectos();
+
 }, []);
 
   return (
