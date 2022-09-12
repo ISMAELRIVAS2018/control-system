@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const listaEstados = "http://127.0.0.1:8000/api/pro_estatus/lista";
-const token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjI3MzYzNjgsImV4cCI6MTY2MjczOTk2OCwibmJmIjoxNjYyNzM2MzY4LCJqdGkiOiJYQ1hvQnBRZnY4cjZWZXFYIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ylnE6zDhZmRWngUpNLT52ivag1oSDCD1WojMyjBiU6M";
+const token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjI5OTgxNzUsImV4cCI6MTY2MzAwMTc3NSwibmJmIjoxNjYyOTk4MTc1LCJqdGkiOiI4Vm5wckdJUFBRcTY5a1RoIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.gZRgePGc9hF9nh14Aym1cMchM6EtxDEmCtwsSttXRNQ ";
 
 let estados=[];
 
-export const getEstadosProyectos2 = async () => {
-    const respuesta = await axios.get(listaEstados, {
+export const getEstadosProyectos = async (API) => {
+  try{
+    const respuesta = await axios.get(API, {
         headers: {
           "Content-type": "application/json",
           authorization: `bearer ${token}`,
@@ -14,5 +14,8 @@ export const getEstadosProyectos2 = async () => {
       });
       estados=respuesta.data;
       return estados;
+  }
+  catch(error){
+    console.log(error.response.data.message);
+  }
 }
-

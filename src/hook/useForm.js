@@ -3,7 +3,7 @@ import axios from "axios";
 
 const API = "http://127.0.0.1:8000/api/proyecto/agregar";
   
-const token ="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjI2NTY1MDIsImV4cCI6MTY2MjY2MDEwMiwibmJmIjoxNjYyNjU2NTAyLCJqdGkiOiJ5aHV5OFJPSkdlV09ObTZPIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.eoBp-O9pmltyR8f6rtVECLpAQ8IIDaxxgBXu61PuoI0"
+const token ="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjI5OTgxNzUsImV4cCI6MTY2MzAwMTc3NSwibmJmIjoxNjYyOTk4MTc1LCJqdGkiOiI4Vm5wckdJUFBRcTY5a1RoIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.gZRgePGc9hF9nh14Aym1cMchM6EtxDEmCtwsSttXRNQ"
 
 export const useForm=(initialFrom,validateForm)=> {
    const [form, setForm] = useState(initialFrom);
@@ -63,7 +63,7 @@ export const useForm=(initialFrom,validateForm)=> {
       );
       return respuesta
     }
-    catch(error){
+    catch(error){ 
       console.log(error.response.data);
     }
   } 

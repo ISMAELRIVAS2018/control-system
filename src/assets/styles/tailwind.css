@@ -2020,6 +2020,11 @@ select {
   padding-bottom: 2.5rem;
 }
 
+.py-12{
+  padding-top: 3rem; /* 48px */
+  padding-bottom: 3rem; /* 48px */
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;

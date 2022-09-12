@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, React  } from "react";
 import { useForm } from "hook/useForm";
-import axios from "axios";
 import Alert from "components/Alert";
+import  {getEstadosProyectos}  from "services";
 
 export default function FormularioProyecto() {
+
+    const listaEstados = "http://127.0.0.1:8000/api/pro_estatus/lista";
+
+    //Lista de estados
+    const[estados,setEstados]=useState([]);
 
     //Objeto con todos los valores de los inputs
     const proyectoInicial={
@@ -39,6 +44,7 @@ export default function FormularioProyecto() {
         return error;
     }
     
+    //Utilizo el hook personalizado para usar el formulario
     const {
         form,
         error,
@@ -47,10 +53,18 @@ export default function FormularioProyecto() {
         handleChange,
         handleBlur,
         handSubmit
-      }=useForm(proyectoInicial,validationsForm);
+    }=useForm(proyectoInicial,validationsForm);
 
+    //Llamo a la funcion (que devuelve un apromesa) y que requiere de la url de la API
+    useEffect(() => {
+        getEstadosProyectos(listaEstados).then((datos)=>{
+        setEstados(datos);
+      });
+      
+      }, []);
+    
     return (
-        <React.Fragment>
+        <>
             <form onSubmit={handSubmit} className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
                 <div className="rounded-t bg-white mb-0 px-6 py-6">
                     <div className="text-center flex justify-between">
@@ -199,6 +213,6 @@ export default function FormularioProyecto() {
                     </div>
                 </div>
             </form>
-        </React.Fragment>
+        </>
     );
 }

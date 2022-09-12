@@ -1,9 +1,37 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "hook/useForm";
 
 export default function Login() {
   const baseUrl = "http://127.0.0.1:8000/api/auth/login";
+  
+  const usuarioInicial={
+    email:"",
+    passwords:""
+  }
+
+  const validationsForm=(form)=>{
+    let error ={};
+    if(!form.email.trim()){
+      error.email="* El campo email es requerido o no es valido"
+    }
+    if(!form.passwords.trim()){
+      error.passwords="* El email es requerido o no es valido"
+    }
+    return error;
+}
+
+const {
+  form,
+  error,
+  loading,
+  response,
+  handleChange,
+  handleBlur,
+  handSubmit
+}=useForm(usuarioInicial,validationsForm);
+  
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -81,11 +109,13 @@ export default function Login() {
                       type="email"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="Email"
-                      onChange={(e) => setEmail(e.target.value)}
-                      value={email}
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
                   </div>
-
+                  {error.email && <p className="text-red-600">{error.email}</p>}
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"

@@ -4,7 +4,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // Componentes
 
 import Navbar from "components/Navbars/AuthNavbar.js";
-import FooterSmall from "components/Footers/FooterSmall.js";
+/* import FooterSmall from "components/Footers/FooterSmall.js"; */
 
 // Vistas
 
@@ -16,7 +16,7 @@ export default function Auth() {
     <>
       <Navbar transparent />
       <main>
-        <section className="relative w-full h-full py-40 min-h-screen">
+        <section className="relative w-full h-full py-16 min-h-screen">
           <div
             className="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
             style={{
@@ -29,7 +29,7 @@ export default function Auth() {
             <Route path="/auth/register" exact component={Register} />
             <Redirect from="/auth" to="/auth/login" />
           </Switch>
-          <FooterSmall absolute />
+         {/*  <FooterSmall absolute /> */}
         </section>
       </main>
     </>
